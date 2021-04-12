@@ -1,0 +1,33 @@
+<div class="row">
+
+  <div class="col-sm-3">
+  </div>
+  <div class="col-sm-6">
+    <div class="link-div">
+      <button (click)="displayComponent('genInfoOnRisk')" [ngClass]="isGeneInfoOnRisk ? 'focused' : ''">General
+        information on risks
+      </button>
+      <button (click)="displayComponent('riskConcepts')" [ngClass]="isRiskConcept ? 'focused' : ''">Risk concepts
+      </button>
+      <button (click)="displayComponent('security')" [ngClass]="isSecurityObjectives ? 'focused' : ''">Security
+        objectives
+      </button>
+      <button (click)="displayComponent('maturity')" [ngClass]="isMaturity ? 'focused' : ''">Maturity / Risk management
+        rations
+      </button>
+    </div>
+  </div>
+  <div class="col-sm-3">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-10">
+    <app-general-info-on-risks class="flex-1" *ngIf="isGeneInfoOnRisk"></app-general-info-on-risks>
+    <app-risk-concepts class="flex-1" *ngIf="isRiskConcept"></app-risk-concepts>
+    <app-security-objectives class="flex-1" *ngIf="isSecurityObjectives"></app-security-objectives>
+    <app-maturity class="flex-1" *ngIf="isMaturity"></app-maturity>
+  </div>
+  <div class="col-sm-1"></div>
+</div>

@@ -1,0 +1,28 @@
+.link-div {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-around;
+  background-color: #F4F2F2;
+  border-radius: 20px;
+
+}
+
+button {
+  padding-top: 0.3rem;
+  padding-bottom: 0.2rem;
+  text-decoration: none;
+  color: black;
+  border: none;
+  border-bottom: solid 3px #F4F2F2;
+}
+
+.focused {
+  border-bottom: solid 3px red;
+}
+
+button:active, button:focus {
+  border-bottom: solid 3px red;
+}
